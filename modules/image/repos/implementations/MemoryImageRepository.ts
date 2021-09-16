@@ -1,3 +1,4 @@
+import { sleep } from "../../../utils/sleep";
 import { Image } from "../../entities/Image";
 import { ImageRepository } from "../ImageRepository";
 
@@ -26,6 +27,7 @@ export class MemoryImageRepository implements ImageRepository {
   
   async getRandomImage(): Promise<Image> {
     const randomImageIndex = Math.floor(Math.random() * this.images.length)
-    return Promise.resolve(this.images[randomImageIndex])
+    await sleep(1000) // Mocking a delay to represent database access
+    return this.images[randomImageIndex]
   }
 }
