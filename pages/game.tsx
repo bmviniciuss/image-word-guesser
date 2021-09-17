@@ -4,8 +4,6 @@ import React from 'react'
 import { Game } from '../components/Game'
 
 const Home: NextPage = () => {
-  const [gameOn, setGameOn] = React.useState<boolean>(false)
-
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>

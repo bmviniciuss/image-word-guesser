@@ -1,8 +1,8 @@
+import React from "react"
+
 import { useImage } from "../../src/hooks/useImage"
-import React from "react";
 import { LoadingState } from "./LoadingState";
 import { GameForm } from "./GameForm";
-
 
 export function Game() {
   const image = useImage('image')
