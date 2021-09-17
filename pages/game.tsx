@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
       <Head>
-        <title>Image Word Guesser</title>
+        <title>Image Word Guesser | Game</title>
         <meta name="description" content="Guess from which words the image was generated" />
       </Head>
 
@@ -22,21 +22,7 @@ const Home: NextPage = () => {
       </header>
 
       <main className="px-4 w-full mx-auto mt-4 sm:max-w-lg">
-        {!gameOn ? (
-          <div className="w-full flex flex-col justify-center items-center">
-
-            <p className="text-lg mb-3">Guess from which words the image was generated!</p>
-            <button
-              onClick={() => setGameOn(true)}
-              className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-            >
-              Start Game
-            </button>
-          </div>
-        )
-          : <Game />
-        }
-
+        <Game />
       </main>
 
     </div>
